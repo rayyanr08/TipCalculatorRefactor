@@ -9,11 +9,13 @@ public class Main {
         System.out.println();
         System.out.println();
 
+        // Initializing bill amount
         Scanner money = new Scanner(System.in);
         System.out.println("Please enter the bill: ");
         String billAmount = money.nextLine();
         double realBillAmount= Double.parseDouble(billAmount);
 
+        // Initializing the tip percentage
         Scanner scannerTax = new Scanner(System.in);
         System.out.println("Please enter the tip percentage: ");
         String tipPercentage = scannerTax.nextLine();
@@ -26,7 +28,7 @@ public class Main {
         int realNumOfPeople = Integer.parseInt(numOfPeople);
         System.out.println();
 
-
+        // printing the receipt which has every calculation
         TipCalculator party = new TipCalculator(realBillAmount,realTipPercentage, realNumOfPeople);
         party.printReceipt();
 
